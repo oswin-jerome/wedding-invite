@@ -36,12 +36,12 @@ const Home = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          // style={{
-          //   borderTopLeftRadius: imageRadius,
-          //   borderTopRightRadius: imageRadius,
+          style={{
+            borderTopLeftRadius: imageRadius,
+            borderTopRightRadius: imageRadius,
 
-          //   margin: widthMargin,
-          // }}
+            margin: widthMargin,
+          }}
           transition={{ duration: 0.5, delay: 1.5 }}
           className=" aspect-3/4 xl:aspect-square overflow-hidden ring-offset-3 ring-1 max-w-175 xl:max-w-100 ring-primary"
         >
