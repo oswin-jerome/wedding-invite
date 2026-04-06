@@ -1,47 +1,37 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { Mr_Bedfort } from "next/font/google";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import img from "@/assets/us.jpeg";
-import leaves from "@/assets/leaves.png";
-import elephant from "@/assets/elephant.png";
-import { useRef } from "react";
+import ourImage from "@/assets/us.jpeg";
+const font = Mr_Bedfort({
+  weight: "400",
+});
 
-export default function Home() {
-  const ref = useRef(null);
-  const { scrollYProgress, scrollX } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], [0, -410]);
-  const elephantScroll = useTransform(scrollYProgress, [0, 1], [0, 110]);
-  const elephantFade = useTransform(scrollYProgress, [0, 1], [1, 0]);
-
+const Home = () => {
   return (
-    <div className="">
-      <section ref={ref} className="w-full h-screen bg-red-400 relative isolate">
-        <div className="absolute inset-0 bg-black -z-10">
-          <Image src={img} className="relative h-full object-cover opacity-80" alt="Background" />
+    <main className="bg-background min-h-screen">
+      <section className="pt-8">
+        <div className="text-center bg-ivory pt-4">
+          <motion.p className="italic text-sm mb-8">And so we know and rely on the love God has for us. God is love. Whoever lives in love lives in God, and God in them (1 John 4:16)</motion.p>
+          <motion.h6 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-primary pb-4 xl:text-xl">
+            Please join us to celebrate our wedding!
+          </motion.h6>
+          <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="text-5xl xl:text-7xl font-bold text-text pb-2 xl:pb-4" style={font.style}>
+            Oswin & Daphney
+          </motion.h1>
+          <motion.p initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1 }} className="text-primary xl:text-xl">
+            Monday, 11th May 2026
+          </motion.p>
         </div>
-
-        <motion.img style={{ y }} initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} src={leaves.src} className="absolute top-0 left-0 w-full h-auto object-cover" alt="Leaves" />
-        <motion.img style={{ y: elephantScroll, opacity: elephantFade }} initial={{ opacity: 0, y: 100, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 1 }} src={elephant.src} className="absolute bottom-0 -left-[50%] w-full h-auto object-cover" alt="Leaves" />
-        <motion.img style={{ y: elephantScroll, opacity: elephantFade }} initial={{ opacity: 0, y: 100, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 1 }} src={elephant.src} className="absolute -bottom-10 left-0 w-full h-auto object-cover" alt="Leaves" />
-        <motion.img style={{ y: elephantScroll, opacity: elephantFade }} initial={{ opacity: 0, y: 100, x: -50 }} animate={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 1 }} src={elephant.src} className="absolute bottom-0 left-[30%] w-full h-auto object-cover" alt="Leaves" />
       </section>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-      <h1>sdsd</h1>
-    </div>
+      <section className="w-full flex flex-col justify-center items-center p-8">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1.5 }} className="w-full max-w-3xl xl:w-xl xl:h-md rounded-lg overflow-hidden rounded-t-full ring-offset-3 ring-1">
+          <Image src={ourImage} alt="Our Image" className=" rounded-t-full w-full" />
+        </motion.div>
+        <p className="text-center pt-4 ">With great pleasure, we joyously seek the honour of your presence prayers and blessings with family at our wedding!</p>
+      </section>
+    </main>
   );
-}
+};
+
+export default Home;
