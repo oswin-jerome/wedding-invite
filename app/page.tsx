@@ -58,14 +58,14 @@ const Home = () => {
         <motion.div viewport={{ amount: 1 }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <motion.h3 className="text-4xl text-text font-bold mt-4">Wedding</motion.h3>
           <p className="mt-2">The Seventh-Day Adventist Church, Water Tank Road, Nagercoil.</p>
-          <a href="#" className="text-primary underline">
+          <a href="https://maps.app.goo.gl/axfWhduBetLxAVFT9" className="text-primary underline">
             Get Directions
           </a>
         </motion.div>
         <motion.div viewport={{ amount: 1 }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <h3 className="text-4xl text-text font-bold mt-4">Reception</h3>
           <p className="mt-2">Y R Mahal, Water Tank Road, Nagercoil - 1</p>
-          <a href="#" className="text-primary underline">
+          <a href="https://maps.app.goo.gl/w6nRUxHDFVS2Ee1V6" className="text-primary underline">
             Get Directions
           </a>
         </motion.div>
