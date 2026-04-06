@@ -18,7 +18,9 @@ const Home = () => {
     <main className="bg-background min-h-screen">
       <section className="pt-8">
         <div className="text-center bg-ivory pt-4">
-          <motion.p className="italic text-sm mb-8">And so we know and rely on the love God has for us. God is love. Whoever lives in love lives in God, and God in them (1 John 4:16)</motion.p>
+          <motion.p initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="italic text-sm mb-8">
+            And so we know and rely on the love God has for us. God is love. Whoever lives in love lives in God, and God in them (1 John 4:16)
+          </motion.p>
           <motion.h6 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-primary pb-4 xl:text-xl">
             Please join us to celebrate our wedding!
           </motion.h6>
