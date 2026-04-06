@@ -45,7 +45,7 @@ const Home = () => {
           transition={{ duration: 0.5, delay: 1.5 }}
           className=" aspect-3/4 xl:aspect-square overflow-hidden ring-offset-3 ring-1 max-w-175 xl:max-w-100 ring-primary"
         >
-          <motion.img initial={{ scale: 1.05 }} animate={{ scale: 1 }} style={{ scale: scaleImage }} transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }} src={ourImage2.src} alt="Our Image" className=" w-full object-cover aspect-3/4 xl:aspect-square" />
+          <motion.img initial={{ scale: 1.05 }} animate={{ scale: 1 }} transition={{ duration: 0.5, delay: 1.5, ease: "easeInOut" }} src={ourImage2.src} alt="Our Image" className=" w-full object-cover aspect-3/4 xl:aspect-square" />
         </motion.div>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 2 }} className="text-center pt-4 px-8">
           With great pleasure, we joyously seek the honour of your presence prayers and blessings with family at our wedding!
