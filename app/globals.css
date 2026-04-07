@@ -5,6 +5,7 @@
   --foreground: #1d1b16;
   --color-primary: #c6754d;
   --color-text: #2a1105;
+  --color-lite: #965a3c;
 }
 
 @theme inline {
@@ -15,6 +16,7 @@
   --font-body: var(--font-body);
   --color-primary: var(--color-primary);
   --color-text: var(--color-text);
+  --color-lite: var(--color-lite);
 }
 
 body {

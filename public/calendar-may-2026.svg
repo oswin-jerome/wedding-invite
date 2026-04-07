@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">May 2026 Calendar</title>
+  <desc id="desc">Minimal calendar for May 2026 with May 11 marked with a heart.</desc>
+  <defs>
+    <style>
+      .title { font: 700 56px "Cinzel", "Times New Roman", serif; fill: #3a2a1f; letter-spacing: 8px; }
+      .weekday { font: 600 22px "Cormorant Garamond", "Times New Roman", serif; fill: #8b6a55; letter-spacing: 2px; }
+      .date { font: 600 28px "Cormorant Garamond", "Times New Roman", serif; fill: #3f2f24; }
+      .muted { fill: #c5b4a6; }
+    </style>
+  </defs>
+
+  <rect x="70" y="70" width="1060" height="760" rx="28" fill="#fffaf3" stroke="#eadfd3" stroke-width="2"/>
+
+  <text x="600" y="160" text-anchor="middle" class="title">MAY 2026</text>
+
+  <g class="weekday" text-anchor="middle">
+    <text x="170" y="250">SUN</text>
+    <text x="320" y="250">MON</text>
+    <text x="470" y="250">TUE</text>
+    <text x="620" y="250">WED</text>
+    <text x="770" y="250">THU</text>
+    <text x="920" y="250">FRI</text>
+    <text x="1070" y="250">SAT</text>
+  </g>
+
+  <g class="date" text-anchor="middle" dominant-baseline="middle">
+    <!-- Week 1 (May 1 is Friday) -->
+    <text x="920" y="340">1</text>
+    <text x="1070" y="340">2</text>
+
+    <!-- Week 2 -->
+    <text x="170" y="430">3</text>
+    <text x="320" y="430">4</text>
+    <text x="470" y="430">5</text>
+    <text x="620" y="430">6</text>
+    <text x="770" y="430">7</text>
+    <text x="920" y="430">8</text>
+    <text x="1070" y="430">9</text>
+
+    <!-- Week 3 -->
+    <text x="170" y="520">10</text>
+    <text x="320" y="520">11</text>
+    <text x="470" y="520">12</text>
+    <text x="620" y="520">13</text>
+    <text x="770" y="520">14</text>
+    <text x="920" y="520">15</text>
+    <text x="1070" y="520">16</text>
+
+    <!-- Week 4 -->
+    <text x="170" y="610">17</text>
+    <text x="320" y="610">18</text>
+    <text x="470" y="610">19</text>
+    <text x="620" y="610">20</text>
+    <text x="770" y="610">21</text>
+    <text x="920" y="610">22</text>
+    <text x="1070" y="610">23</text>
+
+    <!-- Week 5 -->
+    <text x="170" y="700">24</text>
+    <text x="320" y="700">25</text>
+    <text x="470" y="700">26</text>
+    <text x="620" y="700">27</text>
+    <text x="770" y="700">28</text>
+    <text x="920" y="700">29</text>
+    <text x="1070" y="700">30</text>
+
+    <!-- Week 6 -->
+    <text x="170" y="790">31</text>
+  </g>
+
+  <!-- Heart highlight around May 11 -->
+  <g transform="translate(320 492)">
+    <path d="M0 22 C0 8 18 -2 32 8 C46 -2 64 8 64 22 C64 42 32 60 32 60 C32 60 0 42 0 22 Z" fill="#e56b6f" opacity="0.18"/>
+    <path d="M0 22 C0 8 18 -2 32 8 C46 -2 64 8 64 22 C64 42 32 60 32 60 C32 60 0 42 0 22 Z" fill="none" stroke="#d1656b" stroke-width="2"/>
+  </g>
+</svg>

@@ -2,8 +2,8 @@
 import { Mr_Bedfort } from "next/font/google";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import ourImage from "@/assets/us.jpeg";
 import ourImage2 from "@/assets/us2.png";
+import Calendar from "./calder";
 const font = Mr_Bedfort({
   weight: "400",
 });
@@ -27,7 +27,7 @@ const Home = () => {
           <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="text-5xl xl:text-7xl font-bold text-text pb-2 xl:pb-4" style={font.style}>
             Oswin & Daphney
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1 }} className="text-primary xl:text-xl">
+          <motion.p initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1 }} className="text-primary font-bold text-lg xl:text-xl">
             Monday, 11th May 2026
           </motion.p>
         </div>
@@ -50,6 +50,12 @@ const Home = () => {
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 2 }} className="text-center pt-4 px-8">
           With great pleasure, we joyously seek the honour of your presence prayers and blessings with family at our wedding!
         </motion.p>
+      </section>
+      <section className="w-full flex flex-col items-center px-6 sm:px-8 md:px-10 py-12">
+        <div initial={{ opacity: 0, y: 30, scale: 0.98 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.8 }} className="w-full max-w-4xl">
+          {/* <Image src="/calendar-may-2026.svg" alt="May 2026 calendar with May 11 marked" width={1200} height={900} className="w-full h-auto" /> */}
+          <Calendar />
+        </div>
       </section>
       <section className="p-8 mt-10 xl:text-center">
         <motion.h2 viewport={{ amount: 1 }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-2xl text-primary font-bold">
