@@ -79,7 +79,6 @@ const Home = () => {
           May we gather to witness their union in Christ and celebrate the beginning of their journey together in faith, hope and love.
         </motion.p>
       </section>
-      <section className="h-[1200px]"></section>
     </main>
   );
 };
