@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
-import previewImage from "@/assets/us2.png";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 
 const playfair = Cinzel({
   variable: "--font-display",
@@ -19,13 +19,14 @@ export const metadata: Metadata = {
   title: "Oswin & Daphney | Holy Matrimony Invitation",
   description:
     "Invitation to the holy matrimony of Oswin Jerome A and Daphney on 11th May 2026.",
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: "Oswin & Daphney | Holy Matrimony Invitation",
     description:
       "Invitation to the holy matrimony of Oswin Jerome A and Daphney on 11th May 2026.",
     images: [
       {
-        url: previewImage.src,
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "Oswin & Daphney",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     title: "Oswin & Daphney | Holy Matrimony Invitation",
     description:
       "Invitation to the holy matrimony of Oswin Jerome A and Daphney on 11th May 2026.",
-    images: [previewImage.src],
+    images: ["/og.png"],
   },
 };
 
