@@ -20,10 +20,110 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #fff7ea 0%, #fdf9f3 45%, #f7efe4 100%);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 236, 214, 0.7), transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(245, 210, 196, 0.6), transparent 50%),
+    radial-gradient(circle at 30% 80%, rgba(232, 211, 189, 0.55), transparent 60%),
+    linear-gradient(135deg, #fff7ea 0%, #fdf9f3 45%, #f7efe4 100%);
+  background-size: 140% 140%, 160% 160%, 150% 150%, 100% 100%;
+  background-position: 0% 0%, 100% 0%, 20% 100%, 0% 0%;
+  animation: softGradient 18s ease-in-out infinite;
   color: var(--foreground);
   font-family: var(--font-body), "Source Sans 3", sans-serif;
   min-height: 100vh;
+}
+
+@keyframes softGradient {
+  0% {
+    background-position: 0% 0%, 100% 0%, 20% 100%, 0% 0%;
+  }
+  50% {
+    background-position: 20% 10%, 80% 15%, 30% 90%, 0% 0%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 0%, 20% 100%, 0% 0%;
+  }
+}
+
+@keyframes floatA {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(18px, 22px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatB {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, 16px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatC {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(12px, -18px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatD {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-14px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatE {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(16px, -14px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.floating-heart {
+  position: absolute;
+  filter: drop-shadow(0 10px 18px rgba(229, 107, 111, 0.25));
+  animation-name: heartFloat;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes heartFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(10px, -16px) scale(1.08);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
 }
 
 * {

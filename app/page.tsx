@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import ourImage2 from "@/assets/us2.png";
 import Calendar from "./calder";
+import { useEffect, useState } from "react";
 const font = Mr_Bedfort({
   weight: "400",
 });
@@ -15,7 +16,13 @@ const Home = () => {
   const widthMargin = useTransform(scrollYProgress, [0.4, 0], [0, 32]);
 
   return (
-    <main className="bg-background min-h-screen">
+    <main className="bg-background min-h-screen relative overflow-hidden">
+      <div className="pointer-events-none absolute -top-24 -left-32 h-80 w-80 rounded-full bg-[#f6d9c4]/50 blur-3xl animate-[floatA_18s_ease-in-out_infinite]" />
+      <div className="pointer-events-none absolute top-60 -right-24 h-96 w-96 rounded-full bg-[#f0c9d0]/45 blur-3xl animate-[floatB_22s_ease-in-out_infinite]" />
+      <div className="pointer-events-none absolute bottom-10 left-1/3 h-72 w-72 rounded-full bg-[#e9d7bf]/50 blur-3xl animate-[floatC_20s_ease-in-out_infinite]" />
+      <div className="pointer-events-none absolute top-[35%] left-8 h-56 w-56 rounded-full bg-[#f8e3d2]/45 blur-3xl animate-[floatD_24s_ease-in-out_infinite]" />
+      <div className="pointer-events-none absolute bottom-24 right-[18%] h-64 w-64 rounded-full bg-[#f2d7c6]/40 blur-3xl animate-[floatE_26s_ease-in-out_infinite]" />
+
       <section className="pt-8">
         <div className="text-center bg-ivory pt-4">
           <motion.p initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="italic text-sm mb-8">
